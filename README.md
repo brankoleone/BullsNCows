@@ -1,4 +1,4 @@
-# Basic Web Project
+# Bulls N Cows
 
 An application base folder for creating apps with Node.js (io.js), Angular.js, Bootstrap and other with LiveEdit testing on browser in real time.
 

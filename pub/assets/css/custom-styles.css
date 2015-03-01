@@ -15,5 +15,11 @@
 .i-nbr {
     float: left;
     width: 35px;
-    margin: 0 8px;
+    margin: 0 4px;
+}
+
+.bnc-row {
+    margin: 15px 0px 0px 0px;
+    padding: 10px 10px 10px 10px;
+    font-size: 1.8em;
 }

@@ -1,0 +1,11 @@
+{
+  "directory": "pub/lib/",
+  "color": true,
+  "analytics": false,
+  "timeout": 120000,
+  "registry": {
+    "search": [
+      "https://bower.herokuapp.com"
+    ]
+  }
+}

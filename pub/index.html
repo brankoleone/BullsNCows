@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bulls N Cows</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-lumen.css"/>
+    <link rel="stylesheet" href="assets/css/custom-styles.css"/>
+</head>
+<body>
+    <div class="panel panel-default">
+        <img class="img-responsive center-block" src="assets/img/logo-header.png" alt="BullsNCows"/>
+    </div>
+
+    <ui-view />
+
+    <div class="main-panel">
+        <div class="panel panel-default pull-right">
+            <div class="panel-heading">
+                <h2 class="panel-title">My Number</h2>
+            </div>
+            <div class="panel-body">
+                <div class="btn-toolbar" role="toolbar" aria-label="...">
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-primary"><h1 class="nbr nw">3</h1></button>
+                        <button type="button" class="btn btn-primary"><h1 class="nbr nw">2</h1></button>
+                        <button type="button" class="btn btn-primary"><h1 class="nbr nw">6</h1></button>
+                        <button type="button" class="btn btn-primary"><h1 class="nbr nw">7</h1></button>
+                    </div>
+                </div>
+
+                <hr/>
+
+            </div>
+            <div class="panel-footer">Panel footer</div>
+        </div>
+
+        <div class="panel panel-default pull-left">
+            <div class="panel-heading">
+                <h2 class="panel-title">Opponent's Number</h2>
+            </div>
+            <div class="panel-body">
+                <div class="btn-toolbar" role="toolbar" aria-label="...">
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button type="button" class="btn btn-default">
+                            <h1 class="nbr">3</h1>
+                            <h1 class="nbr"><img src="assets/img/void.png" alt=""/></h1>
+                        </button>
+                        <button type="button" class="btn btn-default">
+                            <h1 class="nbr">2</h1>
+                            <h1 class="nbr"><img src="assets/img/bull-ico.png" alt=""/></h1>
+                        </button>
+                        <button type="button" class="btn btn-default">
+                            <h1 class="nbr">6</h1>
+                            <h1 class="nbr"><img src="assets/img/cow-ico.png" alt=""/></h1>
+                        </button>
+                        <button type="button" class="btn btn-default">
+                            <h1 class="nbr">7</h1>
+                            <h1 class="nbr"><img src="assets/img/void.png" alt=""/></h1>
+                        </button>
+                    </div>
+                </div>
+
+                <hr/>
+                <div class="btn-toolbar" role="toolbar" aria-label="...">
+                    <div class="btn-group" role="group" aria-label="...">
+                            <input type="text" class="form-control i-nbr" size="1"/>
+                            <input type="text" class="form-control i-nbr" size="1"/>
+                            <input type="text" class="form-control i-nbr" size="1"/>
+                            <input type="text" class="form-control i-nbr" size="1"/>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <button type="button" class="btn btn-success btn-lg" style="width: 100%">CHECK NUMBER</button>
+            </div>
+        </div>
+    </div>
+
+    <script data-main="index" src="lib/requirejs/require.js"></script>
+</body>
+</html>

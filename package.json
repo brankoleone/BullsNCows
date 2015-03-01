@@ -1,0 +1,21 @@
+{
+  "name": "BullsNCows",
+  "version": "0.0.1",
+  "description": "An application base folder for creating apps with Node.js (io.js), Angular.js, Bootstrap and other with LiveEdit testing on browser in real time.",
+  "author": "Author Great",
+  "devDependencies": {
+    "bower": "^1.3.12",
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.4",
+    "gulp-webserver": "^0.9.0"
+  },
+  "main": "''",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "''"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,19 @@
+.main-panel {
+    border: 0px solid darkgray;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.nbr {
+    margin: 0;
+}
+
+.nw {
+    color: #ffffff;
+}
+
+.i-nbr {
+    float: left;
+    width: 35px;
+    margin: 0 8px;
+}

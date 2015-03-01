@@ -1,0 +1,9 @@
+<div id="wrap">
+	<section ui-view="topbar" id="topbar"></section>
+	<section ui-view="navbar" id="navbar" ng-hide="App.currentUser.isAnonymous()"></section>
+
+	<!-- the content -->
+	<section ui-view="content"></section>
+</div>
+
+<section ui-view="footer"></section>

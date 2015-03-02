@@ -1,0 +1,16 @@
+<!-- breadcrumb -->
+<div class="container-fluid" ng-show="App.$breadcrumb.getStatesChain().length">
+    <!--<div ncy-breadcrumb></div>-->
+</div>
+<!--
+<div class="container-fluid" id="alerts" ng-repeat="alert in App.Alert.all()">
+    <div class="alert alert-dismissible alert-{{alert.type}}" role="alert">
+        <h4 class="alert-heading" ng-show="{{alert.title}}">{{alert.title}}</h4>
+        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span
+                class="sr-only" translate>Close</span></button>
+        {{alert.msg}}
+    </div>
+</div>
+-->
+
+<section ui-view class="container-fluid" id="content"></section>

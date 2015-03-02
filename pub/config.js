@@ -13,6 +13,7 @@ requirejs.config({
         app: '../app',
         jquery: 'jquery/dist/jquery',
         angular: 'angular/angular',
+        'angular-ui-router': 'angular-ui-router/release/angular-ui-router',
         bootstrap: 'bootstrap/dist/js/bootstrap',
         domReady: 'domReady/domReady',
         defineModule: '../assets/js/defineModule'
@@ -28,6 +29,17 @@ requirejs.config({
             deps: [
                 'jquery'
             ]
+        },
+        'angular-ui-router': {
+            exports: 'angular',
+            deps: [
+                'angular'
+            ]
+        }
+    },
+    map: {
+        '*': {
+            'ui.router': 'angular-ui-router'
         }
     }
 });

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 .App {
   text-align: center;
 }
@@ -7,9 +9,15 @@
   pointer-events: none;
 }
 
+.title {
+  font-size: 95px;
+  font-family: 'Kaushan Script', cursive;
+  margin-bottom: 1rem;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    // animation: App-logo-spin infinite 20s linear;
   }
 }
 

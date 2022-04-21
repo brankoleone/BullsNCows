@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import Guess from './Guess';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <hr className="border-gray-600 my-10" />
+      <Guess></Guess>
     </div>
   );
 }

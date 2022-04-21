@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import Guess from './Guess';
+import GuessAlgo from './GuessAlgo';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         </a>
       </header>
       <hr className="border-gray-600 my-10" />
-      <Guess></Guess>
+      <GuessAlgo></GuessAlgo>
     </div>
   );
 }

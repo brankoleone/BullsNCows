@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 
-export default class Guess extends Component {
+export default class GuessAlgo extends Component {
   digitToGuess: string;
-  state = { guesses: [] as string[], test: 'cabron' };
+  state = { guesses: [] as string[] };
   bulls: string[] = [];
   cows: string[] = [];
 
   constructor(props: any) {
     super(props);
-    this.makeGuess = this.makeGuess.bind(this);
     this.digitToGuess = this.generateRandomGuess();
+    this.makeGuess = this.makeGuess.bind(this);
+    this.clearGuesses = this.clearGuesses.bind(this);
   }
 
   render = () => (
@@ -31,6 +32,9 @@ export default class Guess extends Component {
           <button className="btn btn-blue" onClick={this.makeGuess}>
             Guess
           </button>
+          <button className="btn " onClick={this.clearGuesses}>
+            Clear
+          </button>
         </div>
       </div>
     </React.Fragment>
@@ -51,16 +55,39 @@ export default class Guess extends Component {
   makeGuess(): void {
     const guess = this.generateRandomGuess();
     const guesses = this.state.guesses;
+
+    console.log('Match: ', this.matchGuess(guess));
+
     guesses.push(guess);
     this.setState({ guesses });
+  }
+
+  matchGuess(value: string): { b: number; c: number } {
+    let b = 0;
+    let c = 0;
+
+    Array.from(value).forEach((ch, vi) => {
+      const i = this.digitToGuess.indexOf(ch);
+      if (i !== -1) {
+        if (i === vi) {
+          b++;
+        } else {
+          c++;
+        }
+      }
+    });
+
+    return { b, c };
+  }
+
+  clearGuesses(): void {
+    this.setState({ guesses: [] });
   }
 
   generateRandomGuess(): string {
     let randomGuess = '';
     while (randomGuess.length < 4) {
       let digit = String(Math.round(Math.random() * 9));
-      console.log('digit:', digit);
-
       while (randomGuess.includes(digit)) {
         digit = String(Math.round(Math.random() * 9));
       }

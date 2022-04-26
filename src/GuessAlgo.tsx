@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import { BnC } from './models/BnC';
 
 export default class GuessAlgo extends Component {
   digitToGuess: string;
-  state = { guesses: [] as string[] };
-  bulls: string[] = [];
-  cows: string[] = [];
+
+  bnc: BnC = new BnC();
+  state = { guesses: this.bnc.getGuesses() };
 
   constructor(props: any) {
     super(props);
-    this.digitToGuess = this.generateRandomGuess();
+    this.digitToGuess = this.bnc.generateRandomGuess();
     this.makeGuess = this.makeGuess.bind(this);
     this.clearGuesses = this.clearGuesses.bind(this);
   }
@@ -53,46 +54,14 @@ export default class GuessAlgo extends Component {
   }
 
   makeGuess(): void {
-    const guess = this.generateRandomGuess();
-    const guesses = this.state.guesses;
+    const guess = this.bnc.generateRandomGuess();
 
-    console.log('Match: ', this.matchGuess(guess));
+    console.log('Match: ', this.bnc.matchGuesses(guess, this.digitToGuess));
 
-    guesses.push(guess);
-    this.setState({ guesses });
-  }
-
-  matchGuess(value: string): { b: number; c: number } {
-    let b = 0;
-    let c = 0;
-
-    Array.from(value).forEach((ch, vi) => {
-      const i = this.digitToGuess.indexOf(ch);
-      if (i !== -1) {
-        if (i === vi) {
-          b++;
-        } else {
-          c++;
-        }
-      }
-    });
-
-    return { b, c };
+    this.setState({ guesses: this.bnc.insertGuess(guess) });
   }
 
   clearGuesses(): void {
-    this.setState({ guesses: [] });
-  }
-
-  generateRandomGuess(): string {
-    let randomGuess = '';
-    while (randomGuess.length < 4) {
-      let digit = String(Math.round(Math.random() * 9));
-      while (randomGuess.includes(digit)) {
-        digit = String(Math.round(Math.random() * 9));
-      }
-      randomGuess += digit;
-    }
-    return randomGuess;
+    this.setState({ guesses: this.bnc.clearGuesses() });
   }
 }
